@@ -1,0 +1,63 @@
+<!--Google map-->
+
+<!--title>Get Assistance</title>
+<style>
+    .map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:50%;
+width:100%;
+position:absolute;
+}
+</style>
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 100px">
+        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+          style="border:0" allowfullscreen></iframe>
+      </div>
+
+
+
+      
+<!--Google Maps-->
+
+<!--input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "code.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');
+            });
+        }
+    </script-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>    
+  </head>
+  <body>
+    <input type="button" id='script' name="scriptbutton" value=" Run Script " onclick="goPython()">
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script>
+        function goPython(){
+            $.ajax({
+              url: "code.py",
+             context: document.body
+            }).done(function() {
+             alert('finished python script');;
+            });
+        }
+    </script>
+  </body>
+</html>
